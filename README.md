@@ -1,1 +1,1 @@
-The Maze Project ALX.
+# The Maze Project ALX.

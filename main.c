@@ -66,9 +66,9 @@ typedef struct {
 typedef struct{
     uint8_t r,g,b,a;
 } ColorRGBA;
-ColorRGBA RGBA_Red   = {.r = 0xFF, .g = 0x00, .b = 0x00, .a = 0xFF};
-ColorRGBA RGBA_LightGreen = {.r = 0x00, .g = 0xFF, .b = 0x00, .a = 0xFF};
-ColorRGBA RGBA_LightBlue = {.r = 0x00, .g = 0x00, .b = 0xFF, .a = 0xFF};
+ColorRGBA RGBA_Orange = {.r = 0xFF, .g = 0xA5, .b = 0x00, .a = 0xFF}; // Orange
+ColorRGBA RGBA_White = {.r = 0xFF, .g = 0xFF, .b = 0xFF, .a = 0xFF}; // White
+ColorRGBA RGBA_Grey = {.r = 0x80, .g = 0x80, .b = 0x80, .a = 0xFF};   // Grey
 
 int xy2index(int x, int y, int w) {
     return y * w + x;
@@ -159,9 +159,9 @@ void render(State *state, Player* player) {
         // choose wall color
         ColorRGBA color;
         switch (MAP[xy2index(mapBox.x, mapBox.y, MAP_SIZE)]) {
-            case 1: color = RGBA_Red; break;
-            case 2: color = RGBA_LightGreen; break;
-            case 3: color = RGBA_LightBlue; break;
+            case 1: color = RGBA_Orange; break;
+            case 2: color = RGBA_White; break;
+            case 3: color = RGBA_Grey; break;
         }
 
         // give x and y sides different brightness

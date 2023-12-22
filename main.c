@@ -1,3 +1,24 @@
+/**
+ * @file main.c
+ * @brief The Maze Game
+ *
+ * This program is a simple maze game implemented using SDL2 library.
+ * It renders a 3D maze on the screen and allows the player to navigate
+ * through the maze using the arrow keys. The player can also rotate
+ * left or right using the 'q' and 'e' keys respectively. The goal of
+ * the game is to find the exit of the maze.
+ *
+ * The program uses raycasting technique to render the walls of the maze
+ * and simulate a 3D perspective. It also handles user input for movement
+ * and rotation of the player.
+ *
+ * The maze is represented as a 2D array of integers, where each integer
+ * represents a different type of wall or floor tile. The player's position,
+ * direction, and field of view are stored in a struct.
+ *
+ * The program uses the SDL2 library for window creation, rendering, and
+ * event handling.
+ */
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_hints.h>
